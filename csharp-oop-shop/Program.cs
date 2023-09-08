@@ -1,7 +1,7 @@
 ﻿using csharp_oop_shop;
 
-Products prodotto1 = new Products("pippo", 100, 22);
+Products tastiera = new Products("Tastiera Logitech", 100, 22);
 
-Console.WriteLine(prodotto1.name + prodotto1.price + prodotto1.PriceVat);
+Console.WriteLine("Il prodotto di chiama: " + tastiera.name + " costa attualmente " + tastiera.price + " euro ma per colpa dell'iva costa " + tastiera.PriceVat + " euro");
 
 
