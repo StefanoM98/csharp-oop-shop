@@ -10,12 +10,12 @@ namespace csharp_oop_shop
     public class Products
     {
         private int serialNumber;
-        private string name;
-        private string description = "no description";
-        private decimal price;
-        private decimal vat;
+        public string name { get; set; }
+        public string description { get; set; }
+        public decimal price { get; set; }
+        public decimal vat { get; set; }
 
-        public Products(string productName, decimal productPrice, int productVat)
+        public Products(string productName, decimal productPrice, decimal productVat)
         {
             this.serialNumber = new Random().Next(00000001, 99999999);
             this.name = productName;
@@ -33,7 +33,7 @@ namespace csharp_oop_shop
         }
         public string Description 
         {
-            get { return description; }
+            get { return "no description"; }
         }
 
         public decimal Price 
@@ -41,9 +41,9 @@ namespace csharp_oop_shop
             get { return price; } 
         }
         
-        public decimal Vat 
+        public decimal PriceVat 
         {
-            get { return Price + (Price / 100 * Vat); }
+            get { return Price + (Price / 100 * vat); }
         }
 
 
