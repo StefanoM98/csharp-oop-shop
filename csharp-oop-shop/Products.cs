@@ -10,10 +10,10 @@ namespace csharp_oop_shop
     public class Products
     {
         private int serialNumber;
-        public string name { get; set; }
-        public string description { get; set; }
-        public decimal price { get; set; }
-        public decimal vat { get; set; }
+        private string name;
+        public string description = "purtroppo non abbiamo una descrizione del prodotto";
+        public decimal price;
+        public decimal vat;
 
         public Products(string productName, decimal productPrice, decimal productVat)
         {
@@ -33,7 +33,7 @@ namespace csharp_oop_shop
         }
         public string Description 
         {
-            get { return "no description"; }
+            get { return description; }
         }
 
         public decimal Price 
@@ -46,6 +46,13 @@ namespace csharp_oop_shop
             get { return Price + (Price / 100 * vat); }
         }
 
+        //Metodi
+
+        public string GetFullName()
+        {
+            string fullname = $"{this.name} code: {this.serialNumber}";
+            return fullname;
+        }
 
         
         
